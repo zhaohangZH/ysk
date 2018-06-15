@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_706885_3j8v67fgec7.css">
+    <script src="js/jquery-1.8.3.js"></script>
+</head>
+<body>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if(clientWidth>=750){
+                    docEl.style.fontSize = '100px';
+                }else{
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                }
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<div class="header">
+    <div class="header-content">
+        <a class="header-logo">
+            <img src="img/logo.png" alt="">
+        </a>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">教师资格证</a></li>
+            <li><a href="#">教师招聘</a></li>
+            <li><a href="#">招考公告</a></li>
+            <li><a href="#">APP下载</a></li>
+        </ul>
+        <div class="header-login">
+            <a href="#" class="active">登录</a>
+            <a href="#">注册</a></div>
+    </div>
+</div>
+<div class="m-header">
+    <div class="m-header-content">
+        <div><a href="javascript:history.go(-1);"><img src="./img/88_03.png" alt=""></a></div>
+        <div>易师考</div>
+        <div></div>
+    </div>
+</div>
+<div class="Certificate">
+    <div class="Certificate-box">
+        <div class="Certificate-type">
+            <div class="Certificate-choice">选择类别:</div>
+            <ul class="Certificate-ul">
+                <li class="active">面试</li>
+                <li class="">笔试</li>
+            </ul>
+        </div>
+        <div class="Certificate-type">
+            <div class="Certificate-choice">选择年级:</div>
+            <ul class="Certificate-ul">
+                <li class="active">1</li>
+                <li class="">2</li>
+                <li class="">3</li>
+            </ul>
+        </div>
+        <div class="Certificate-type">
+            <div class="Certificate-choice">选择学科:</div>
+            <ul class="Certificate-ul">
+                <li class="active">1</li>
+                <li class="">2</li>
+                <li class="">3</li>
+                <li class="">4</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sort-content">
+        <div class="sort-text"><span>全部</span>
+            <ul class="sort-text-ul">
+                <li class="active">人气优先 <span class="jt">&uarr;</span></li>
+                <li class="">价格优先 <span class="jt">&darr;</span></li>
+            </ul>
+        </div>
+    </div>
+    <!--移动-->
+    <div class="m-sort-content">
+        <ul class="m-sort-ul">
+            <li class="active">综合</li>
+            <li>人气</li>
+            <li>
+                价格
+                <span>
+                    <i class="iconfont icon-paixujiantoushang active"></i>
+                <i class="iconfont icon-paixujiantouxia"></i>
+                </span>
+            </li>
+            <li>筛选
+            <i class="iconfont icon-shaixuan active"></i></li>
+        </ul>
+        <div class="m-screenbox">
+            <dl class="active">
+                <dt>选择类型</dt>
+                <dd class="btn-type">
+                    <button class="active" type="button" value="1">全部</button>
+                    <button type="button" value="2">笔试</button>
+                    <button type="button" value="3">面试</button>
+                </dd>
+            </dl>
+            <dl>
+                <dt>选择学段</dt>
+                <dd class="btn-period">
+                    <button class="active" type="button" value="1">全部</button>
+                    <button type="button" value="2">高中</button>
+                    <button type="button" value="3">初中</button>
+                    <button type="button" value="4">小学</button>
+                    <button type="button" value="5">幼儿园</button>
+                </dd>
+            </dl>
+            <dl>
+                <dt>选择学科</dt>
+                <dd class="btn-subject">
+                    <button class="active" type="button" value="1">全部</button>
+                    <button type="button" value="2">1</button>
+                    <button type="button" value="3">2</button>
+                    <button type="button" value="4">3</button>
+                    <button type="button" value="5">4</button>
+                </dd>
+            </dl>
+            <a href="javascript:void(0);" onclick="resetScreen()">重置</a>
+            <a href="">提交</a>
+        </div>
+    </div>
+    <div class="Qualified-content clearfix">
+        <a href="#">
+            <div class="m-Qualified-title">
+                <b>教师资格</b>
+                <h5>2018下教师资格证一站拿证（单科）</h5>
+            </div>
+            <div class="Qualified-period">
+                <i><img src="img/jifen.png" alt=""></i>
+                <span>100课时 · 按字讲义</span>
+            </div>
+            <ul class="Qualified-teacher">
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+            </ul>
+            <div class="Qualified-price">
+                <h2>￥<span>1000</span></h2>
+                <span>2000人购买</span>
+            </div>
+        </a>
+        <a href="#">
+            <div class="m-Qualified-title">
+                <b>教师资格</b>
+                <h5>2018下教师资格证一站拿证（单科）</h5>
+            </div>
+            <div class="Qualified-period">
+                <i><img src="img/jifen.png" alt=""></i>
+                <span>100课时 · 按字讲义</span>
+            </div>
+            <ul class="Qualified-teacher">
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+            </ul>
+            <div class="Qualified-price">
+                <h2>￥<span>1000</span></h2>
+                <span>2000人购买</span>
+            </div>
+        </a>
+        <a href="#">
+            <div class="m-Qualified-title">
+                <b>教师资格</b>
+                <h5>2018下教师资格证一站拿证（单科）</h5>
+            </div>
+            <div class="Qualified-period">
+                <i><img src="img/jifen.png" alt=""></i>
+                <span>100课时 · 按字讲义</span>
+            </div>
+            <ul class="Qualified-teacher">
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+            </ul>
+            <div class="Qualified-price">
+                <h2>￥<span>1000</span></h2>
+                <span>2000人购买</span>
+            </div>
+        </a>
+        <a href="#">
+            <div class="m-Qualified-title">
+                <b>教师资格</b>
+                <h5>2018下教师资格证一站拿证（单科）</h5>
+            </div>
+            <div class="Qualified-period">
+                <i><img src="img/jifen.png" alt=""></i>
+                <span>100课时 · 按字讲义</span>
+            </div>
+            <ul class="Qualified-teacher">
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+                <li><img src="img/touxiang.png" alt=""><span>杨老师</span></li>
+            </ul>
+            <div class="Qualified-price">
+                <h2>￥<span>1000</span></h2>
+                <span>2000人购买</span>
+            </div>
+        </a>
+    </div>
+    <div id="page" class="page_div"></div>
+</div>
+<footer class="Bottom">
+    <div class="service">
+        <div class="about"><p class="service-title">关于我们</p><a href="#">了解易师考
+        </a><a href="#">加入易师考</a></div>
+        <div class="contact"><p class="service-title">联系方式</p><a>客服热线：4001234567（
+            周一至周五9:00-18:00）</a><a>客服邮箱：kefu@eshikao.com</a><a
+                href="#" class="consult">在线咨询</a></div>
+        <div class="follow"><p class="service-title">关注我们</p>
+            <div class="follow-gz">
+                <div class="follow-gz-img"><img src="" alt=""></div>
+                <span>微博关注</span></div>
+            <div class="follow-gz">
+                <div class="follow-gz-img"><img src="" alt=""></div>
+                <span>微信关注</span></div>
+        </div>
+    </div>
+    <div class="copyright">© 2011-2017 eshikao.com , All Rights Reserved.京ICP备17004480
+        号-1 | 京公网安备110108008330友情链接
+    </div>
+</footer>
+<div class="m-Bottom">
+    <nav class="m-Nav">
+        <a href="" class="active">
+            <i class="iconfont icon-shouye"></i>
+            <span>首页</span>
+        </a>
+        <a href="">
+            <i class="iconfont icon-zhengshu-copy"></i>
+            <span>教师资格证</span>
+        </a>
+        <a href="">
+            <i class="iconfont icon-zhaopin"></i>
+            <span>教师招聘</span>
+        </a>
+        <a href="">
+            <i class="iconfont icon-wode"></i>
+            <span>我的</span>
+        </a>
+    </nav>
+</div>
+<script>
+    function resetScreen() {
+        $('.m-screenbox dd').each(function () {
+            $(this).children('button').eq(0).addClass('active').siblings().removeClass('active');
+        })
+    }
+</script>
+<script src="./js/paging.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

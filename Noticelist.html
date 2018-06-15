@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="js/jquery-1.8.3.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="header-content">
+        <a class="header-logo">
+            <img src="img/logo.png" alt="">
+        </a>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">教师资格证</a></li>
+            <li><a href="#">教师招聘</a></li>
+            <li><a href="#">招考公告</a></li>
+            <li><a href="#">APP下载</a></li>
+        </ul>
+        <div class="header-login">
+            <a href="#" class="active">登录</a>
+            <a href="#">注册</a></div>
+        <div class="header-login1">
+            <a href=""><img src="./img/touxiang.png" alt=""></a>
+            <a href="#">老天a爷</a>
+        </div>
+    </div>
+</div>
+<div class="notice">
+    <p class="notice-title">
+        <span>招考公告</span>|<span>教师招聘</span>
+    </p>
+    <div class="Certificate-type">
+        <div class="Certificate-choice">选择地区:</div>
+        <ul class="Certificate-ul">
+            <li class="active">1</li>
+            <li class="">2</li>
+            <li class="">3</li>
+            <li class="">4</li>
+        </ul>
+    </div>
+    <div class="notice-listbox">
+        <p class="notice-listbox-title">
+            <img src="./img/addr.png" alt="">
+            <span>
+                已选择
+                <b>山东</b>
+            </span>
+        </p>
+        <div class="notice-datelist">
+            <div class="notice-date">
+                <span>06</span>
+                <span>2018</span>
+            </div>
+            <ul class="notice-datelist-ul">
+                <li>
+                    <a href="">山东|2019山东聊城东阿县南湖行知学校第二批教师招聘笔试人员名单</a>
+                    <span><img src="./img/xiazai.png" alt="">
+                    山东教师招聘考试</span>
+                </li>
+                <li>
+                    <a href="">山东|2019山东聊城东阿县南湖行知学校第二批教师招聘笔试人员名单</a>
+                    <span><img src="./img/xiazai.png" alt="">
+                    山东教师招聘考试</span>
+                </li>
+                <li>
+                    <a href="">山东|2019山东聊城东阿县南湖行知学校第二批教师招聘笔试人员名单</a>
+                    <span><img src="./img/xiazai.png" alt="">
+                    山东教师招聘考试</span>
+                </li>
+            </ul>
+        </div>
+        <div class="notice-datelist">
+            <div class="notice-date">
+                <span>06</span>
+                <span>2018</span>
+            </div>
+            <ul class="notice-datelist-ul">
+                <li>
+                    <a href="">山东|2019山东聊城东阿县南湖行知学校第二批教师招聘笔试人员名单</a>
+                    <span><img src="./img/xiazai.png" alt="">
+                    山东教师招聘考试</span>
+                </li>
+                <li>
+                    <a href="">山东|2019山东聊城东阿县南湖行知学校第二批教师招聘笔试人员名单</a>
+                    <span><img src="./img/xiazai.png" alt="">
+                    山东教师招聘考试</span>
+                </li>
+                <li>
+                    <a href="">山东|2019山东聊城东阿县南湖行知学校第二批教师招聘笔试人员名单</a>
+                    <span><img src="./img/xiazai.png" alt="">
+                    山东教师招聘考试</span>
+                </li>
+            </ul>
+        </div>
+        <div id="page" class="page_div"></div>
+    </div>
+</div>
+<div class="Bottom">
+    <div class="service">
+        <div class="about"><p class="service-title">关于我们</p><a href="#">了解易师考
+        </a><a href="#">加入易师考</a></div>
+        <div class="contact"><p class="service-title">联系方式</p><a>客服热线：4001234567（
+            周一至周五9:00-18:00）</a><a>客服邮箱：kefu@eshikao.com</a><a
+                href="#" class="consult">在线咨询</a></div>
+        <div class="follow"><p class="service-title">关注我们</p>
+            <div class="follow-gz">
+                <div class="follow-gz-img"><img src="" alt=""></div>
+                <span>微博关注</span></div>
+            <div class="follow-gz">
+                <div class="follow-gz-img"><img src="" alt=""></div>
+                <span>微信关注</span></div>
+        </div>
+    </div>
+    <div class="copyright">© 2011-2017 eshikao.com , All Rights Reserved.京ICP备17004480
+        号-1 | 京公网安备110108008330友情链接
+    </div>
+</div>
+<script src="./js/paging.js"></script>
+<script src="js/index.js"></script>
+<script>
+    var renderZhao=(function () {
+        //var jt=$('.sort-text-ul').focus('.jt');
+        var sortRqJt=1;//人气排序
+        function flSwitch(_this) {
+            _this.click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+            _this.click(function () {
+                sortRqJt?$(this).children('.jt').html('&uarr;'):$(this).children('.jt').html('&darr;');
+                sortRqJt?sortRqJt=0:sortRqJt=1;
+            })
+        }
+        $("#page").paging({
+            pageNo:1,
+            totalPage: 10,
+            totalSize: 300,
+            callback: function(num) {
+                alert(num)
+            }
+        })
+        return {
+            init:function () {
+                flSwitch($('.Certificate-ul li'));//分类切换
+                flSwitch($('.sort-text-ul li'));//排序切换
+            }
+        }
+    })();
+    renderZhao.init();
+</script>
+</body>
+</html>

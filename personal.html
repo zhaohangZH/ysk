@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_706885_oj0ko6hl9i.css">
+    <script src="js/jquery-1.8.3.js"></script>
+</head>
+<body>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if(clientWidth>=750){
+                    docEl.style.fontSize = '100px';
+                }else{
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                }
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<!--移动-->
+<div class="m-header">
+    <div class="m-header-content">
+        <div><a href="javascript:history.go(-1);"><img src="./img/88_03.png" alt=""></a></div>
+        <div>易师考</div>
+        <div></div>
+    </div>
+</div>
+<div class="header">
+    <div class="header-content">
+        <a class="header-logo">
+            <img src="img/logo.png" alt="">
+        </a>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">教师资格证</a></li>
+            <li><a href="#">教师招聘</a></li>
+            <li><a href="#">招考公告</a></li>
+            <li><a href="#">APP下载</a></li>
+        </ul>
+        <div class="header-login">
+            <a href="#" class="active">登录</a>
+            <a href="#">注册</a></div>
+        <div class="header-login1">
+            <a href=""><img src="./img/touxiang.png" alt=""></a>
+            <a href="#">老天a爷</a>
+        </div>
+    </div>
+</div>
+<div class="personal">
+    <div class="personal-main">
+        <ul class="personal-nav">
+            <li class="active"><a href="">我的课程</a></li>
+            <li><a href="">个人资料</a></li>
+            <li><a href="">我的优惠券</a></li>
+            <li><a href="">我的订单</a></li>
+            <li><a href="">收货地址</a></li>
+        </ul>
+        <div class="personal-content">
+            <div class="personal-content-title">
+                <div class="personal-content-type">
+                    <span>考试类型</span>
+                <p class="personal-content-drop">
+                    <span>教师资格证</span>
+                    <span>教师招聘</span>
+                </p>
+                </div>
+                <div class="personal-content-type">
+                    <span>课程状态</span>
+                    <p class="personal-content-drop">
+                        <span>直播中</span>
+                        <span>已离线</span>
+                    </p>
+                </div>
+            </div>
+            <div class="personal-list">
+                <div class="personal-detail-content">
+                    <div class="personal-detail-img">
+                        <img src="./img/kcimg.png" alt="">
+                    </div>
+                    <div class="personal-detail-text">
+                        <h3>
+                            <a href="">2018上教师资格证一站拿证（单科）</a>
+                            <span class="">回放课</span>
+                            <i></i>
+                        </h3>
+                        <p class="personal-detail-date">上次观看时间：2018-06-07 10:34:45</p>
+                        <div class="personal-detail-qqq">
+                            <img src="./img/qq0.png" alt="">
+                            <span>加入学员群：123567456</span>
+                            <a href="javascript:pop();">删除课程</a>
+                        </div>
+                    </div>
+                    <div class="personal-prompt-bj">
+                        <div class="personal-prompt">
+                            <p class="personal-prompt-title">温馨提示<a href="javascript:pop();">×</a></p>
+                            <div class="personal-prompt-content">
+                                <div class="personal-prompt-img"><img src="./img/prompt.png" alt=""></div>
+                                <div class="personal-prompt-text">
+                                    <p>该课程将从我的课程中删除，删除后，如课程已下线，您将无法再次添加该课程</p>
+                                    <div class="personal-prompt-an">
+                                        <a href="">确定</a>
+                                        <a href="javascript:pop();" class="active">取消</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="personal-detail-content">
+                    <div class="personal-detail-img">
+                        <img src="./img/kcimg.png" alt="">
+                    </div>
+                    <div class="personal-detail-text">
+                        <h3>
+                            <a href="">2018上教师资格证一站拿证（单科）</a>
+                            <span class="active">直播预告</span>
+                            <i>6天后14:00</i>
+                        </h3>
+                        <p class="personal-detail-date">上次观看时间：2018-06-07 10:34:45</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="Bottom">
+    <div class="service">
+        <div class="about"><p class="service-title">关于我们</p><a href="#">了解易师考
+        </a><a href="#">加入易师考</a></div>
+        <div class="contact"><p class="service-title">联系方式</p><a>客服热线：4001234567（
+            周一至周五9:00-18:00）</a><a>客服邮箱：kefu@eshikao.com</a><a
+                href="#" class="consult">在线咨询</a></div>
+        <div class="follow"><p class="service-title">关注我们</p>
+            <div class="follow-gz">
+                <div class="follow-gz-img"><img src="" alt=""></div>
+                <span>微博关注</span></div>
+            <div class="follow-gz">
+                <div class="follow-gz-img"><img src="" alt=""></div>
+                <span>微信关注</span></div>
+        </div>
+    </div>
+    <div class="copyright">© 2011-2017 eshikao.com , All Rights Reserved.京ICP备17004480
+        号-1 | 京公网安备110108008330友情链接
+    </div>
+</div>
+<script>
+    if(1){
+        $('.header-login').css('display','none');
+        $('.header-login1').css('display','inline-block');
+    }
+    //选择考试类型
+    $('.personal-content-type').eq(0).click(function () {
+                $('.personal-content-title .personal-content-drop').eq(0).toggle();
+                $('.personal-content-title .personal-content-drop').eq(1).hide();
+            })
+    $('.personal-content-type').eq(1).click(function () {
+        $('.personal-content-title .personal-content-drop').eq(1).toggle();
+        $('.personal-content-title .personal-content-drop').eq(0).hide();
+    })
+    function pop(){
+        $('.personal-prompt-bj').toggle();
+    }
+
+</script>
+</body>
+</html>
