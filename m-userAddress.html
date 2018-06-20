@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if(clientWidth>=750){
+                    docEl.style.fontSize = '100px';
+                }else{
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                }
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<!--移动-->
+<div class="m-header">
+    <div class="m-header-content">
+        <div><a href="javascript:history.go(-1);"><img src="./img/88_03.png" alt=""></a></div>
+        <div>易师考</div>
+        <div></div>
+    </div>
+</div>
+<div class="m-addres">
+    <div class="m-addres-list">
+        <div class="m-addres-title">
+            <div class="m-addres-i">
+                <i class="active"></i>默认地址
+            </div>
+            <div class="m-addres-an">
+                <a href="">编辑</a>|<a href="">删除</a>
+            </div>
+        </div>
+        <div class="m-addres-content">
+            <p>
+                <span class="m-addres-man">收货人：赵航</span>
+                <span class="m-addres-phone">12435462562</span>
+            </p>
+            <p class="m-addres-text">收货地址：北京市北京</p>
+        </div>
+    </div>
+    <div class="m-addres-list">
+    <div class="m-addres-title">
+        <div class="m-addres-i">
+            <i></i>默认地址
+        </div>
+        <div class="m-addres-an">
+            <a href="">编辑</a>|<a href="">删除</a>
+        </div>
+    </div>
+    <div class="m-addres-content">
+        <p>
+            <span class="m-addres-man">收货人：赵航</span>
+            <span class="m-addres-phone">12435462562</span>
+        </p>
+        <p class="m-addres-text">收货地址：北京市北京</p>
+    </div>
+</div>
+    <a href="">添加新地址</a>
+</div>
+</body>
+</html>

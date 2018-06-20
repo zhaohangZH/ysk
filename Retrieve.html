@@ -2,11 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>Title</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_706885_oj0ko6hl9i.css">
     <script src="js/jquery-1.8.3.js"></script>
 </head>
 <body>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if(clientWidth>=750){
+                    docEl.style.fontSize = '100px';
+                }else{
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                }
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<!--移动-->
+<div class="m-header">
+    <div class="m-header-content">
+        <div><a href="javascript:history.go(-1);"><img src="./img/88_03.png" alt=""></a></div>
+        <div>易师考</div>
+        <div></div>
+    </div>
+</div>
 <div class="header">
     <div class="header-content">
         <a class="header-logo">
@@ -71,6 +100,27 @@
     <div class="copyright">© 2011-2017 eshikao.com , All Rights Reserved.京ICP备17004480
         号-1 | 京公网安备110108008330友情链接
     </div>
+</div>
+<!--移动-->
+<div class="m-Bottom">
+    <nav class="m-Nav">
+        <a href="" class="active">
+            <i class="iconfont icon-shouye"></i>
+            <span>首页</span>
+        </a>
+        <a href="">
+            <i class="iconfont icon-zhengshu-copy"></i>
+            <span>教师资格证</span>
+        </a>
+        <a href="">
+            <i class="iconfont icon-zhaopin"></i>
+            <span>教师招聘</span>
+        </a>
+        <a href="">
+            <i class="iconfont icon-wode"></i>
+            <span>我的</span>
+        </a>
+    </nav>
 </div>
 <script src="js/index.js"></script>
 </body>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if(clientWidth>=750){
+                    docEl.style.fontSize = '100px';
+                }else{
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                }
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<!--移动-->
+<div class="m-header">
+    <div class="m-header-content">
+        <div><a href="javascript:history.go(-1);"><img src="./img/88_03.png" alt=""></a></div>
+        <div>易师考</div>
+        <div></div>
+    </div>
+</div>
+<div class="m-address">
+    <div class="m-address-list">
+        <p>联系人</p>
+        <div class="m-address-inp">
+            <span>姓名：</span>
+            <input type="text" placeholder="请填写收货人的姓名">
+        </div>
+        <div class="m-address-inp">
+            <span>电话：</span>
+            <input type="text" placeholder="请填写收货人手机号码">
+        </div>
+    </div>
+    <div class="m-address-list">
+        <p>收货地址</p>
+        <div class="m-address-inp">
+            <span>省：</span><select id="s_province" name="s_province"></select>
+        </div>
+        <div class="m-address-inp">
+        <span>市：</span><select id="s_city" name="s_city" ></select> 
+        </div>
+        <div class="m-address-inp">
+            <span>区/县：</span><select id="s_county" name="s_county"></select>
+        </div>
+        <div class="m-address-inp">
+            <span>详细地址：</span>
+            <input type="text" placeholder="请输入详细地址">
+        </div>
+        <div class="m-address-inp">
+            <span>楼号-门牌号：</span>
+            <input type="text" placeholder="例8号楼66室">
+        </div>
+    </div>
+    <div class="m-address-an">
+        <a href="">保存地址</a>
+    </div>
+</div>
+<script class="resources library" src="js/area.js"></script>
+<script src="js/jquery-1.8.3.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
